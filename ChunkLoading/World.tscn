@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Prototypes/ChunkLoading/World.gd" type="Script" id=1]
+[ext_resource path="res://Prototypes/ChunkLoading/DemoPlayer.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 20.9767, 19.8685 )
+
+[node name="World" type="Node2D"]
+script = ExtResource( 1 )
+player_path = NodePath("Player")
+render_distance = 1
+
+[node name="Player" type="KinematicBody2D" parent="."]
+position = Vector2( 440.023, 247.69 )
+z_index = 1
+script = ExtResource( 2 )
+
+[node name="Box" type="CollisionShape2D" parent="Player"]
+shape = SubResource( 1 )
+
+[node name="Cam" type="Camera2D" parent="Player"]
+current = true
+smoothing_enabled = true

@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Prototypes/ChunkLoading/ChunkNode.gd" type="Script" id=2]
+
+[node name="ChunkNode" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Bruh" type="ColorRect" parent="."]
+rect_min_size = Vector2( 75, 75 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Coords" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_right = 40.0
+margin_bottom = 14.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
